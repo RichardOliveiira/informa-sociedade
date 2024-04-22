@@ -1,0 +1,28 @@
+
+	<ion-header>
+		<ion-toolbar>
+			<ion-title>Login</ion-title>
+		</ion-toolbar>
+	</ion-header>
+	
+	<ion-content padding>
+		<div class="login-content">
+		<form [formGroup]="credentialsForm" (ngSubmit)="onSubmit()">
+			<ion-item>
+				<ion-label position="floating">Email</ion-label>
+				<ion-input type="email" formControlName="email"></ion-input>
+			</ion-item>
+			
+			<ion-item>
+				<ion-label position="floating">Senha</ion-label>
+				<ion-input type="password" formControlName="password"></ion-input>
+			</ion-item>
+			
+			<ion-button expand="block" type="submit" [disabled]="!credentialsForm.valid">Entrar</ion-button>
+			<span class="ou-login">OU</span>
+		<ion-button expand="block" type="button" (click)="register()" [disabled]="!credentialsForm.valid"
+		>Registrar-se</ion-button
+		>
+	</form>
+</div>
+</ion-content>

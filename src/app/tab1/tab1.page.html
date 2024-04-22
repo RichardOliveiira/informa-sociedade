@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Avisos - {{user.email}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Avisos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card *ngFor="let aviso of avisos">
+    <ion-card-header>
+      <ion-card-title>{{aviso.titulo}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{aviso.descricao}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
